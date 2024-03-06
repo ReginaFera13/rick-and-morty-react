@@ -1,0 +1,21 @@
+/* * {
+    border: 1px solid red;
+} */
+
+#homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#homeTitle {
+    margin-bottom: 15px;
+}
+
+#imInRick {
+    width: 640px;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
