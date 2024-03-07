@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,7 +10,7 @@ function NavBar() {
   return (
     <Navbar bg="myColor" expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to='/'>
           <Image
               alt=""
               src="src/assets/rick-icon.jpeg"
@@ -23,9 +24,9 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/">Home</NavDropdown.Item>
-              <NavDropdown.Item href="/about">About</NavDropdown.Item>
-              <NavDropdown.Item href="/characters">Characters</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/'>Home</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/about'>About</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/characters'>Characters</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

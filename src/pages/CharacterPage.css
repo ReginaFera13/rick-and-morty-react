@@ -1,0 +1,21 @@
+/* * {
+    border: 1px solid blue;
+} */
+
+#charcatersPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+#charctersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+}

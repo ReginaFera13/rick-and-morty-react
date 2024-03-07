@@ -1,0 +1,28 @@
+.characterCard {
+    padding: 10px;
+    margin: 10px;
+}
+
+.bg-myColor {
+    background-image: linear-gradient(to bottom 
+    right,rgba(2,252,28,255),rgba(85,180,54,255),rgba(253,251,80,255) )
+}
+
+.centerText {
+    text-align: center;
+}
+
+.centerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.textBold {
+    font-weight: bold;
+}
+
+.textBolder {
+    font-weight: bolder;
+}
