@@ -27,6 +27,7 @@ function NavBar() {
               <NavDropdown.Item as={Link} to='/'>Home</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/about'>About</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/characters'>Characters</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/favorites'>Favorites</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
