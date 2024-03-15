@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 // import { useState } from 'react';
 import { useOutletContext } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
+import './TooManyFavorites.css'
 
 function TooManyFavorites({ onClose }) {
   const myOutletContextObj = useOutletContext();
@@ -11,13 +12,13 @@ function TooManyFavorites({ onClose }) {
   // console.log(favorites)
 
   return (
-    <Modal show={true} onHide={onClose} backdrop="static" keyboard={false}>
+    <Modal className='center' show={true} onHide={onClose} backdrop="static" keyboard={false}>
       <Modal.Header closeButton>
-        <Modal.Title>Too Many Favorites</Modal.Title>
+        <Modal.Title className='bold'>Too Many Favorites!</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p>You can only have 4 favorites at a time. Choose a Character to unfavorite.</p>
-        <div>
+        <div className='center'>
           {favorites.map(c =>
             <CharacterCard 
               key={c.id}
@@ -32,7 +33,7 @@ function TooManyFavorites({ onClose }) {
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
-          Close
+          Submit
         </Button>
       </Modal.Footer>
     </Modal>

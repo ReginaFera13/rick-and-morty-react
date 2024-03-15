@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from './components/NavBar';
 import './App.css';
 
+export const SearchContext = createContext();
+
 function App() {
   const [favorites, setFavorites] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [searchCharacter, setSearchCharacter] = useState([]);
+  const [charcterInput, setCharacterInput] = useState([]);
 
   const addToFavorites = (character) => {
     if (favorites.length < 4) {
@@ -24,8 +28,15 @@ function App() {
 
   const checkIsFavorite = (id) => favorites.some(c => c.id === id);
 
+  const contextObj = {
+    searchCharacter, 
+    setSearchCharacter,
+    charcterInput, 
+    setCharacterInput
+  };
+
   return (
-    <>
+    <SearchContext.Provider value={contextObj}>
       <NavBar />
       <Outlet 
         context={{
@@ -37,7 +48,7 @@ function App() {
           showModal
         }}
       />
-    </>
+    </SearchContext.Provider>
   );
 }
 
